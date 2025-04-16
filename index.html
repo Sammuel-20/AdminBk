@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Namo-dashbord</title>
+
+		<!-- Meta -->
+		<meta name="description" content="Marketplace for Bootstrap Admin Dashboards" />
+		<meta name="author" content="Bootstrap Gallery" />
+		<link rel="shortcut icon" href="assets/images/favicon.svg" />
+
+		<!-- *************
+			************ CSS Files *************
+		************* -->
+		<link rel="stylesheet" href="assets/fonts/bootstrap/bootstrap-icons.css" />
+		<link rel="stylesheet" href="assets/css/main.min.css" />
+
+		<!-- *************
+			************ Vendor Css Files *************
+		************ -->
+
+		<!-- Scrollbar CSS -->
+		<link rel="stylesheet" href="assets/vendor/overlay-scroll/OverlayScrollbars.min.css" />
+	</head>
+
+	<body>
+		<!-- Page wrapper start -->
+		<div class="page-wrapper">
+
+			<!-- App header starts -->
+			<div class="app-header d-flex align-items-center">
+
+				<!-- Toggle buttons start -->
+				<div class="d-flex col">
+					<button class="toggle-sidebar" id="toggle-sidebar">
+						<i class="bi bi-list lh-1 text-white"></i>
+					</button>
+					<button class="pin-sidebar" id="pin-sidebar">
+						<i class="bi bi-list lh-1 text-white"></i>
+					</button>
+				</div>
+				<!-- Toggle buttons end -->
+
+				<!-- App brand starts 
+				<div class="app-brand py-2 col">
+					<a href="index.html">
+						<img src="assets/images/logo.svg" class="logo" alt="Bootstrap Gallery" />
+					</a>
+				</div>
+				<!-- App brand ends -->
+
+				<!-- App header actions start -->
+				<div class="header-actions col">
+					<div class="d-lg-flex d-none align-items-center gap-2">
+						
+						<!--
+						<div class="dropdown">
+							<a class="dropdown-toggle header-action-icon" href="#!" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<i class="bi bi-exclamation-triangle fs-5 lh-1 text-white"></i>
+								<span class="count-label">7</span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end shadow-lg">
+								<h5 class="fw-semibold px-3 py-2 text-primary">
+									Notifications
+								</h5>
+								<div class="dropdown-item">
+									<div class="d-flex py-2 border-bottom">
+										<div class="icon-box md bg-success rounded-circle me-3">
+											<i class="bi bi-exclamation-triangle text-white fs-4"></i>
+										</div>
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Rosalie Deleon</h6>
+											<p class="mb-1 text-secondary">You have new order.</p>
+											<p class="small m-0 text-secondary">30 mins ago</p>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="d-flex py-2 border-bottom">
+										<div class="icon-box md bg-danger rounded-circle me-3">
+											<i class="bi bi-exclamation-octagon text-white fs-4"></i>
+										</div>
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Donovan Stuart</h6>
+											<p class="mb-2">Membership has been expired.</p>
+											<p class="small m-0 text-secondary">2 days ago</p>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="d-flex py-2">
+										<div class="icon-box md bg-warning rounded-circle me-3">
+											<i class="bi bi-exclamation-square text-white fs-4"></i>
+										</div>
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Roscoe Richards</h6>
+											<p class="mb-2">Payment pending. Pay now.</p>
+											<p class="small m-0 text-secondary">3 days ago</p>
+										</div>
+									</div>
+								</div>
+								<div class="d-grid mx-3 my-1">
+									<a href="javascript:void(0)" class="btn btn-info">View all</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a class="dropdown-toggle header-action-icon" href="#!" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<i class="bi bi-bell fs-5 lh-1 text-white"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end shadow-lg">
+								<h5 class="fw-semibold px-3 py-2 text-primary">Updates</h5>
+								<div class="dropdown-item">
+									<div class="d-flex py-2 border-bottom">
+										<div class="icon-box md border border-success grd-success-light rounded-circle me-3">
+											<span class="text-success">DS</span>
+										</div>
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Douglass Shaw</h6>
+											<p class="mb-1 text-secondary">
+												Membership has been ended.
+											</p>
+											<p class="small m-0 text-secondary">Today, 07:30pm</p>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="d-flex py-2 border-bottom">
+										<div class="icon-box md border border-danger grd-danger-light rounded-circle me-3">
+											<span class="text-danger">WG</span>
+										</div>
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Willie Garrison</h6>
+											<p class="mb-1 text-secondary">
+												Congratulate, James for new job.
+											</p>
+											<p class="small m-0 text-secondary">Today, 08:00pm</p>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="d-flex py-2">
+										<div class="icon-box md border border-warning grd-warning-light rounded-circle me-3">
+											<span class="text-warning">TJ</span>
+										</div>
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Terry Jenkins</h6>
+											<p class="mb-1 text-secondary">
+												Lewis added new schedule release.
+											</p>
+											<p class="small m-0 text-secondary">Today, 09:30pm</p>
+										</div>
+									</div>
+								</div>
+								<div class="d-grid mx-3 my-1">
+									<a href="javascript:void(0)" class="btn btn-info">View all</a>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a class="dropdown-toggle header-action-icon" href="#!" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<i class="bi bi-envelope-open fs-5 lh-1 text-white"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end shadow-lg">
+								<h5 class="fw-semibold px-3 py-2 text-primary">Messages</h5>
+								<div class="dropdown-item">
+									<div class="d-flex py-2 border-bottom">
+										<img src="assets/images/user3.png" class="img-3x me-3 rounded-5" alt="Admin Theme" />
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Angelia Payne</h6>
+											<p class="mb-1 text-secondary">
+												Membership has been ended.
+											</p>
+											<p class="small m-0 text-secondary">Today, 07:30pm</p>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="d-flex py-2 border-bottom">
+										<img src="assets/images/user1.png" class="img-3x me-3 rounded-5" alt="Admin Theme" />
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Clyde Fowler</h6>
+											<p class="mb-1 text-secondary">
+												Congratulate, James for new job.
+											</p>
+											<p class="small m-0 text-secondary">Today, 08:00pm</p>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="d-flex py-2">
+										<img src="assets/images/user4.png" class="img-3x me-3 rounded-5" alt="Admin Theme" />
+										<div class="m-0">
+											<h6 class="mb-1 fw-semibold">Sophie Michiels</h6>
+											<p class="mb-2 text-secondary">
+												Lewis added new schedule release.
+											</p>
+											<p class="small m-0 text-secondary">Today, 09:30pm</p>
+										</div>
+									</div>
+								</div>
+								<div class="d-grid mx-3 my-1">
+									<a href="javascript:void(0)" class="btn btn-primary">View all</a>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					<div class="dropdown ms-3">
+						<a id="userSettings" class="dropdown-toggle d-flex py-2 align-items-center text-decoration-none" href="#"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/user2.png" class="rounded-2 img-3x" alt="Bootstrap Gallery" />
+							<div class="ms-2 text-truncate d-lg-block d-none text-white">
+								<span class="d-flex opacity-50 small">Admin</span>
+								<span>Taylor Franklin</span>
+							</div>
+						</a>
+						<!--
+						<div class="dropdown-menu dropdown-menu-end shadow-lg">
+							<div class="header-action-links">
+								<a class="dropdown-item" href="profile.html"><i
+										class="bi bi-person border border-primary text-primary"></i>Profile</a>
+								<a class="dropdown-item" href="settings.html"><i
+										class="bi bi-gear border border-danger text-danger"></i>Settings</a>
+								<a class="dropdown-item" href="widgets.html"><i
+										class="bi bi-box border border-success text-success"></i>Widgets</a>
+							</div>
+							<div class="mx-3 mt-2 d-grid">
+								<a href="login.html" class="btn btn-primary btn-sm">Logout</a>
+							</div>
+						</div>-->
+					</div>
+				</div>
+				<!-- App header actions end -->
+			</div>
+
+			<!-- App header ends -->
+
+			<!-- Main container start -->
+			<div class="main-container">
+
+				<!-- Sidebar wrapper start -->
+				<nav id="sidebar" class="sidebar-wrapper">
+
+					<!-- Sidebar profile starts -->
+					<div class="sidebar-profile">
+						<img src="assets/images/user3.png" class="profile-user mb-3" alt="Admin Dashboard" />
+						<div class="text-center">
+							<h6 class="profile-name m-0 text-nowrap text-truncate">
+								Floyd Howard
+							</h6>
+						</div>
+						
+					</div>
+					<!-- Sidebar profile ends -->
+					<div class="sidebarMenuScroll">
+						<!-- Sidebar menu starts -->
+						<ul class="sidebar-menu">
+							<li class="active current-page">
+								<a href="index.html">
+									<i class="bi bi-pie-chart"></i>
+									<span class="menu-text">Dashboard</span>
+								</a>
+							</li>
+							<li>
+								<a href="Transaction.html">
+									<i class="bi bi-bar-chart-line"></i>
+									<span class="menu-text">Transactions</span>
+								</a>
+							</li>
+							
+							<li class="treeview">
+								<a href="#!">
+									<i class="bi bi-stickies"></i>
+									<span class="menu-text">Message</span>
+								</a>
+								<ul class="treeview-menu">
+									<li>
+										<a href="message.html">Inbox</a>
+									</li>
+									<li>
+										<a href="mail.html">Mail</a>
+									</li>
+									
+								</ul>
+							</li>
+							<li>
+								<a href="logout.php">
+									<i class="bi bi-bar-chart-line"></i>
+									<span class="menu-text">Logout</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Sidebar menu ends -->
+
+				</nav>
+				<!-- Sidebar wrapper end -->
+
+				<!-- App container starts -->
+				<div class="app-container">
+
+					<!-- App hero header starts -->
+					
+					<!-- App Hero header ends -->
+					<!-- App body starts -->
+					<div class="app-body pt-3">
+						<!-- Row start -->
+						<div class="row gx-3">
+							<div class="col-xl-8 col-sm-12 col-12" >
+								<div class="card mb-3">
+									<div class="card-body height-230">
+										<div class="row align-items-end">
+											<div class="col-sm-8">
+												<h3 class="mb-4">Welcome Franklin 🎉</h3>
+												<p>
+													You’re doing great! Stay organized
+												</p>
+												<div class="mt-4 d-flex flex-wrap gap-3">
+													<div class="d-flex align-items-center">
+														<div class="icon-box lg grd-info-light rounded-5 me-3">
+															<i  class="fs-3 bi bi-person-plus-fill"></i>
+														</div>
+														<div class="m-0">
+															<h3 class="m-0 fw-semibold">30</h3>
+															<p class="m-0 text-secondary">Active Users</p>
+														</div>
+													</div>
+													<div class="d-flex align-items-center">
+														<div class="icon-box lg grd-danger-light rounded-5 me-3">
+															<i class="fs-3 bi bi-person-dash"></i>
+														</div>
+														<div class="m-0">
+															<h3 class="m-0 fw-semibold">4</h3>
+															<p class="m-0 text-secondary">Inactive User</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<img src="assets/images/sales.svg" class="congrats-img" alt="Bootstrap Gallery" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-sm-12 col-12">
+								<div class="row">
+									<div class="col-md-12 col-sm-6 col-12" style="background-color: #1a73e8;">
+										<div class="bg-transparent-light rounded-1 mb-3 position-relative">
+											<div class="p-3 text-white">
+												
+												<div class="mb-2">
+													<i class="bi bi-box-seam fs-1 lh-1"></i>
+												</div>
+												<div class="d-flex align-items-center justify-content-between">
+													<h5 class="m-0 fw-normal">Total Money</h5>
+													<h3 class="m-0">$6500.00</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-6 col-12" style="background-color: #1a73e8;">
+										<div class="bg-transparent-light rounded-1 mb-3 position-relative">
+											<div class="p-3 text-white">
+												
+												<div class="mb-2">
+													<i class="fs-3 bi bi-people"></i>
+												</div>
+												<div class="d-flex align-items-center justify-content-between">
+													<h5 class="m-0 fw-normal">Total Customer</h5>
+													<h3 class="m-0">65</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Row end -->
+
+						<!-- Row start -->
+						<div class="row gx-3">
+							<div class="col-xxl-12">
+								<div class="card mb-3">
+									<div class="card-body">
+										<div class="custom-tabs-container">
+											<ul class="nav nav-tabs" id="customTab2" role="tablist">
+												<li class="nav-item" role="presentation">
+													<a class="nav-link" id="tab-oneA" data-bs-toggle="tab" href="#oneA" role="tab" aria-controls="oneA" aria-selected="false" tabindex="-1">All Users
+														<span class="badge rounded-pill bg-info ms-2">9</span></a>
+												</li>
+												<li class="nav-item" role="presentation">
+													<a class="nav-link active" id="tab-twoA" data-bs-toggle="tab" href="#twoA" role="tab" aria-controls="twoA" aria-selected="true">Active Users<span class="badge rounded-pill bg-danger ms-2" style="background-color: green !important;">7</span></a>
+												</li>
+												<li class="nav-item" role="presentation">
+													<a class="nav-link" id="tab-threeA" data-bs-toggle="tab" href="#threeA" role="tab" aria-controls="threeA" aria-selected="false" tabindex="-1">Inactive Users<span class="badge rounded-pill bg-danger ms-2">6</span>
+												</li>
+											</ul>
+											<div class="tab-content" id="customTabContent2">
+												<div class="tab-pane fade" id="oneA" role="tabpanel" aria-labelledby="tab-oneA">
+													<div class="row gx-3">
+														
+														<div class="col-xxl-12">
+															<div class="card mb-3">
+																<div class="card-body">
+																	<div class="table-responsive">
+																		<table class="table align-middle table-hover m-0">
+																			<thead>
+																				<tr>
+																					<th scope="col"></th>
+																					<th scope="col">Username</th>
+																					<th scope="col">Email</th>
+																					<th scope="col">Account Number</th>
+																					<th scope="col">Start date</th>
+																					<th scope="col">Staus</th>
+																					<th scope="col">Balance</th>
+																					<th scope="col">Actions</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr class="grd-primary-light">
+																					<th scope="row">
+																						<img class="rounded-circle img-3x me-2" src="assets/images/user.png" alt="Bootstrap Gallery">
+																					</th>
+																					<td>Nnamo Starboy</td>
+																					<td>snad@mail.com</td>
+																					<td>2844858594</td>
+																					<td>28/10/2022</td>
+																					<td>
+																						<span style="color: green;">Active</span>
+																					</td>
+																					<td>$92,000</td>
+																					<td>
+																						<a class="btn btn-info btn-sm" href="#"><i class="bi bi-pencil"></i>
+																						</a>
+																						<a class="btn btn-danger btn-icon btn-sm mb-1" href="#"><i class="bi bi-trash"></i>
+																						</a>
+																					</td>
+																				</tr>
+																				<tr class="grd-primary-light">
+																					<th scope="row">
+																						<img class="rounded-circle img-3x me-2" src="assets/images/user.png" alt="Bootstrap Gallery">
+																					</th>
+																					<td>Nnamo Starboy</td>
+																					<td>snad@mail.com</td>
+																					<td>2844858594</td>
+																					<td>28/10/2022</td>
+																					<td>
+																						<span style="color: rgb(202, 13, 13);">Active</span>
+																					</td>
+																					<td>$92,000</td>
+																					<td>
+																						<a class="btn btn-info btn-sm" href="user.html"><i class="bi bi-pencil"></i>
+																						</a>
+																						<a class="btn btn-danger btn-icon btn-sm mb-1" href="#"><i class="bi bi-trash"></i>
+																						</a>
+																					</td>
+																				</tr>
+																				
+																				
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														
+													</div>
+												</div>
+												<div class="tab-pane fade active show" id="twoA" role="tabpanel" aria-labelledby="tab-twoA">
+													<div class="row gx-3">
+														
+														<div class="col-xxl-12">
+															<div class="card mb-3">
+																<div class="card-body">
+																	<div class="table-responsive">
+																		<table class="table align-middle table-hover m-0">
+																			<thead>
+																				<tr>
+																					<th scope="col"></th>
+																					<th scope="col">Username</th>
+																					<th scope="col">Email</th>
+																					<th scope="col">Account Number</th>
+																					<th scope="col">Start date</th>
+																					<th scope="col">Staus</th>
+																					<th scope="col">Balance</th>
+																					<th scope="col">Actions</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr class="grd-primary-light">
+																					<th scope="row">
+																						<img class="rounded-circle img-3x me-2" src="assets/images/user.png" alt="Bootstrap Gallery">
+																					</th>
+																					<td>Nnamo Starboy</td>
+																					<td>snad@mail.com</td>
+																					<td>2844858594</td>
+																					<td>28/10/2022</td>
+																					<td>
+																						<span style="color: green;">Active</span>
+																					</td>
+																					<td>$92,000</td>
+																					<td>
+																						<a class="btn btn-info btn-sm" href="#"><i class="bi bi-pencil"></i>
+																						</a>
+																						<a class="btn btn-danger btn-icon btn-sm mb-1" href="#"><i class="bi bi-trash"></i>
+																						</a>
+																					</td>
+																				</tr>
+																				<tr class="grd-primary-light">
+																					<th scope="row">
+																						<img class="rounded-circle img-3x me-2" src="assets/images/user.png" alt="Bootstrap Gallery">
+																					</th>
+																					<td>Nnamo Starboy</td>
+																					<td>snad@mail.com</td>
+																					<td>2844858594</td>
+																					<td>28/10/2022</td>
+																					<td>
+																						<span style="color: green;">Active</span>
+																					</td>
+																					<td>$92,000</td>
+																					<td>
+																						<a class="btn btn-info btn-sm" href="user.html"><i class="bi bi-pencil"></i>
+																						</a>
+																						<a class="btn btn-danger btn-icon btn-sm mb-1" href="#"><i class="bi bi-trash"></i>
+																						</a>
+																					</td>
+																				</tr>
+																				
+																				
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														
+													</div>
+												</div>
+												<div class="tab-pane fade" id="threeA" role="tabpanel" aria-labelledby="tab-threeA">
+													<div class="row gx-3">
+														
+														<div class="col-xxl-12">
+															<div class="card mb-3">
+																<div class="card-body">
+																	<div class="table-responsive">
+																		<table class="table align-middle table-hover m-0">
+																			<thead>
+																				<tr>
+																					<th scope="col"></th>
+																					<th scope="col">Username</th>
+																					<th scope="col">Email</th>
+																					<th scope="col">Account Number</th>
+																					<th scope="col">Start date</th>
+																					<th scope="col">Staus</th>
+																					<th scope="col">Balance</th>
+																					<th scope="col">Actions</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr class="grd-primary-light">
+																					<th scope="row">
+																						<img class="rounded-circle img-3x me-2" src="assets/images/user.png" alt="Bootstrap Gallery">
+																					</th>
+																					<td>Nnamo Starboy</td>
+																					<td>snad@mail.com</td>
+																					<td>2844858594</td>
+																					<td>28/10/2022</td>
+																					<td>
+																						<span style="color: rgb(202, 13, 13);">Active</span>
+																					</td>
+																					<td>$92,000</td>
+																					<td>
+																						<a class="btn btn-info btn-sm" href="#" onclick="window.location='user.html'"><i class="bi bi-pencil"></i>
+																						</a>
+																						<a class="btn btn-danger btn-icon btn-sm mb-1" href="#" onclick="window.location='delet.html'"><i class="bi bi-trash"></i>
+																						</a>
+																					</td>
+																				</tr>
+																				<tr class="grd-primary-light">
+																					<th scope="row">
+																						<img class="rounded-circle img-3x me-2" src="assets/images/user.png" alt="Bootstrap Gallery">
+																					</th>
+																					<td>Nnamo Starboy</td>
+																					<td>snad@mail.com</td>
+																					<td>2844858594</td>
+																					<td>28/10/2022</td>
+																					<td>
+																						<span style="color: rgb(202, 13, 13);">Active</span>
+																					</td>
+																					<td>$92,000</td>
+																					<td>
+																						<a href="#" onclick="window.location='user.html'" class="btn btn-info btn-sm">
+																							<i class="bi bi-pencil"></i> 
+																						</a>
+																						<a class="btn btn-danger btn-icon btn-sm mb-1" href="#" onclick="window.location='delete.html'"><i class="bi bi-trash"></i>
+																						</a>
+																					</td>
+																				</tr>
+																				
+																				
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Row end -->
+
+						
+
+					</div>
+					<!-- App body ends -->
+
+					<!-- App footer start -->
+					<div class="app-footer">
+						<span>© Bootstrap Gallery 2023</span>
+					</div>
+					<!-- App footer end -->
+
+				</div>
+				<!-- App container ends -->
+
+			</div>
+			<!-- Main container end -->
+
+		</div>
+		<!-- Page wrapper end -->
+
+		<!-- *************
+			************ JavaScript Files *************
+		************* -->
+		<!-- Required jQuery first, then Bootstrap Bundle JS -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+		<!-- *************
+			************ Vendor Js Files *************
+		************* -->
+
+		<!-- Overlay Scroll JS -->
+		<script src="assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js"></script>
+		<script src="assets/vendor/overlay-scroll/custom-scrollbar.js"></script>
+
+		<!-- Apex Charts -->
+		<script src="assets/vendor/apex/apexcharts.min.js"></script>
+		<script src="assets/vendor/apex/custom/dash1/sales.js"></script>
+		<script src="assets/vendor/apex/custom/dash1/revenue.js"></script>
+		<script src="assets/vendor/apex/custom/dash1/source.js"></script>
+
+		<!-- Vector Maps -->
+		<script src="assets/vendor/jvectormap/jquery-jvectormap-2.0.5.min.js"></script>
+		<script src="assets/vendor/jvectormap/gdp-data.js"></script>
+		<script src="assets/vendor/jvectormap/continents-mill.js"></script>
+		<script src="assets/vendor/jvectormap/custom/world-map-markers3.js"></script>
+
+		<!-- Custom JS files -->
+		<script src="assets/js/custom.js"></script>
+	</body>
+
+</html>
