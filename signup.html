@@ -26,30 +26,45 @@
 					<form action="index.html" class="my-5">
 						<div class="login-form rounded-4 p-4 mt-5">
 							<a href="index.html" class="mb-4 d-flex">
-								<img src="assets/images/logo.svg" class="img-fluid login-logo" alt="Unity Admin Dashboard" />
+								<img src="assets/images/logo.svg" class="img-fluid login-logo" alt="Earth Admin Dashboard" />
 							</a>
-							<h2 class="fw-light mb-4">Login</h2>
+							<h2 class="fw-light mb-4">SignUp</h2>
+							<div class="mb-3">
+								<label class="form-label">Username</label>
+								<input type="text" class="form-control border-0" placeholder="Enter your Username" />
+							</div>
 							<div class="mb-3">
 								<label class="form-label">Your Email</label>
 								<input type="text" class="form-control border-0" placeholder="Enter your email" />
 							</div>
 							<div class="mb-3">
+								<label class="form-label">Date of Birth</label>
+								<input type="date" class="form-control border-0" placeholder="Enter your email" />
+							</div>
+							<div class="mb-3">
 								<label class="form-label">Your Password</label>
 								<input type="password" class="form-control border-0" placeholder="Enter password" />
 							</div>
+							<div class="mb-3">
+								<label class="form-label">Confirm Password</label>
+								<input type="password" class="form-control border-0" placeholder="Re-enter password" />
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Country</label>
+								<input type="text" class="form-control border-0" placeholder="enter country" />
+							</div>
 							<div class="d-flex align-items-center justify-content-between">
 								<div class="form-check m-0">
-									<input class="form-check-input border-0" type="checkbox" value="" id="rememberPassword" />
-									<label class="form-check-label" for="rememberPassword">Remember</label>
+									<input class="form-check-input border-0" type="checkbox" value="" id="termsConditions" />
+									<label class="form-check-label" for="termsConditions">I agree to the terms and conditions</label>
 								</div>
-								<a href="forgot-password.html" class="text-white text-decoration-underline">Lost password?</a>
 							</div>
 							<div class="d-grid py-3 mt-3">
 								<button type="submit" class="btn btn-lg btn-primary">
-									Login
+									Signup
 								</button>
 							</div>
-							<div class="text-center py-3">or Login with</div>
+							<div class="text-center py-3">or Signup with</div>
 							<div class="d-flex gap-2 justify-content-center">
 								<button type="submit" class="btn btn-outline-light">
 									<i class="bi bi-google me-2"></i>Gmail
@@ -59,9 +74,9 @@
 								</button>
 							</div>
 							<div class="text-center pt-4">
-								<span>Not registered?</span>
-								<a href="signup.html" class="text-white text-decoration-underline ms-2">
-									SignUp</a>
+								<span>Already have an account?</span>
+								<a href="login.html" class="text-white text-decoration-underline ms-2">
+									Login</a>
 							</div>
 						</div>
 					</form>
